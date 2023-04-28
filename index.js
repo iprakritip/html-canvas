@@ -6,7 +6,7 @@ context.strokeStyle = "#BADA55";
 context.lineJoin = "round";
 context.lineCap = "round";
 context.lineWidth = 50;
-
+context.globalCompositeOperation = "multiply";
 
 let isDrawing = false;
 let lastX = 0;
