@@ -72,3 +72,8 @@ button:hover {
     background-color: #fff;
     color: #000;
 }
+/* button:focus{
+    transform: scale(0.9);
+    background-color: #fff;
+    color: #000;
+} */

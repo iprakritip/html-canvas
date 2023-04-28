@@ -2,6 +2,7 @@ const canvas = document.querySelector("#draw");
 const small = document.querySelector(".small");
 const medium = document.querySelector(".medium");
 const large = document.querySelector(".large");
+const download = document.querySelector(".btn")
 // const clear = document.querySelector(".clear")
 
 const context = canvas.getContext("2d");
@@ -78,11 +79,21 @@ function draw(e) {
     //     context.lineWidth--;
     // }
 }
+function downloadCanvas() {
+    const dataURL = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.download = "my_sketch.png";
+    link.href = dataURL;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 canvas.addEventListener("mousedown", (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY]
 });
 canvas.addEventListener("mousemove", draw)
-
 canvas.addEventListener("mouseup", () => isDrawing = false);
 canvas.addEventListener("mouseout", () => isDrawing = false);
+
+download.addEventListener("click", downloadCanvas);
