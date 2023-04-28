@@ -1,7 +1,74 @@
-html, body {
+html,
+body {
     margin: 0;
-  }
-  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
     text-align: center;
-  }
- 
+}
+
+/* canvas {
+    border: 1px solid red;
+} */
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brushSize {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 1.5rem;
+    gap: 2rem;
+}
+
+
+.outline {
+    outline: 1px solid #000;
+    outline-offset: 2px;
+}
+
+.brushSize>* {
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+}
+
+.small {
+    height: 7px;
+    width: 7px;
+
+}
+
+.medium {
+    height: 13px;
+    width: 13px;
+}
+
+.large {
+    height: 18px;
+    width: 18px;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+button {
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
